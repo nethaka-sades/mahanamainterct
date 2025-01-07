@@ -262,7 +262,7 @@ button{
 .default-btn{
     font-family: "Open Sans",sans-serif;
     letter-spacing: 2px;
-    background-color: #ff4c4c;
+    background-color: #ff9100;
     color: #ddd;
     line-height: 45px;
     display: inline-block;
@@ -519,7 +519,7 @@ ul.nav > li > a.active{
     position: relative;
 }
 .hero-content h1{
-    font-size: 80px;
+    font-size: 150px;
     text-transform: uppercase;
 }
 .hero-content h5{
@@ -528,7 +528,7 @@ ul.nav > li > a.active{
 }
 .hero-content p{
     color: #ddd;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 .social-link{}
 .social-link li{
