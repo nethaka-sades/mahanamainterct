@@ -51,10 +51,8 @@ h1, h2, h3, h4, h5, h6{
 h1{
     font-size: 40px;
     font-weight: 800;
-    line-height: 1.2;
-    margin: 0 0 10px;
     color: #fff;
-    letter-spacing: -0.05em;
+
 }
 h2{
     font-size: 32px;
@@ -96,7 +94,7 @@ ul{
 p, li, a, span{}
 p{
     font-size: 15px;
-    margin-bottom: 15px;
+
 }
 a, a:hover{
     text-decoration: none;
@@ -510,7 +508,7 @@ ul.nav > li > a.active{
    Hero Section
    ========================================================================== */
 .hero-section{
-    background-image: url(../img/hero-background.jpg);
+    background-image: url(../img/hero-background.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -528,7 +526,6 @@ ul.nav > li > a.active{
 }
 .hero-content p{
     color: #ddd;
-    margin-bottom: 25px;
 }
 .social-link{}
 .social-link li{
@@ -545,7 +542,7 @@ ul.nav > li > a.active{
 }
 .down-arrow a {
     position: absolute;
-    width: 40px;
+    width: 100px;
     height: auto;
     left: calc(50% - 25px);
     bottom: 50px;
@@ -553,7 +550,6 @@ ul.nav > li > a.active{
     font-size: 10px;
     font-weight: 600;
     color: #ddd;
-    writing-mode: vertical-rl;
     text-align: center;
     line-height: 40px;
     animation: bounce 2s infinite;
