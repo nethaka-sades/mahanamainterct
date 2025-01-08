@@ -86,12 +86,6 @@ img {
   border: none;
   outline: none;
   max-width: 100%;
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Chrome */
-  image-rendering: crisp-edges; /* Standard CSS */
-  image-rendering: pixelated; /* Universal support since 2021 */
-  -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
 ul {
   display: block;
