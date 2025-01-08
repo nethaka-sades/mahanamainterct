@@ -309,13 +309,18 @@
                                         <button id="submit" class="default-btn submit-button" type="submit">Send Message</button>
                                     </div>
                                 </div>
-                                <div id="form-messages" class="alert" role="alert"></div>
                             </form>
         
                             <!-- Success Message Screen -->
                             <div id="success-message" class="alert alert-success" style="display: none;">
                                 <h3>Your message has been sent successfully!</h3>
                                 <p>Thank you for reaching out.</p>
+                            </div>
+        
+                            <!-- Error Message -->
+                            <div id="error-message" class="alert alert-danger" style="display: none;">
+                                <h3>Oops, something went wrong.</h3>
+                                <p>There was an error submitting your message. Please try again later.</p>
                             </div>
                         </div>
                     </div>
@@ -337,22 +342,24 @@
                     body: formData
                 })
                 .then(response => {
-                    // Check if the submission is successful (HTTP status 200)
                     if (response.ok) {
-                        // Hide the form and show success message
+                        // Hide the form
                         document.querySelector('.contact-form').style.display = 'none';
+                        // Show success message
                         document.getElementById('success-message').style.display = 'block';
                     } else {
-                        // Handle error if Formspree returns an error status
-                        throw new Error('Error sending message');
+                        // If the response is not ok, show error message
+                        throw new Error('There was an error with the form submission.');
                     }
                 })
                 .catch(error => {
+                    // Show error message
                     console.error('Error:', error);
-                    alert('There was an error sending your message. Please try again later.');
+                    document.getElementById('error-message').style.display = 'block';
                 });
             });
         </script>
+        
         
         
         
