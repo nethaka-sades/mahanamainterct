@@ -827,8 +827,6 @@ ul.nav > li > a.active {
    CTA Section
    ========================================================================== */
 .cta-section {
-}
-.cta-section {
   padding: 130px 0;
 }
 .cta-section .cta-content h2 {
@@ -839,8 +837,6 @@ ul.nav > li > a.active {
 /* ==========================================================================
    Title Section
    ========================================================================== */
-.title-section {
-}
 .title-section {
   padding: 15px 0;
 }
