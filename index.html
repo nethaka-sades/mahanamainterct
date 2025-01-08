@@ -279,7 +279,6 @@
             </div>
         </section><!-- cta-section -->
 
-
         <section id="contact">
             <div>
                 <h2>Contact Us</h2>
@@ -301,24 +300,15 @@
                     </div>
                 </form>
         
-                <!-- Confirmation message -->
-                <div id="confirmationMessage" style="display:none;">
-                    <p>Your message has been sent successfully! Thank you for contacting us.</p>
+                <!-- Success message -->
+                <div id="confirmationMessage" style="display:none; background-color: #d4edda; color: #155724; padding: 10px; margin-top: 10px; border: 1px solid #c3e6cb;">
+                    Your message has been sent successfully! Thank you for contacting us.
                 </div>
             </div>
         </section>
         
-        <script>
-            document.getElementById("contactForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent form from submitting immediately
-                
-                // Display success message regardless of submission outcome
-                document.getElementById("contactForm").style.display = "none"; // Hide the form
-                document.getElementById("confirmationMessage").style.display = "block"; // Show confirmation
-            });
-        </script>
         
-
+        
 		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 	
 		<!-- jQuery Lib -->
