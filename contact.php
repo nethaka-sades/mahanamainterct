@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Update this to your desired email address.
-    $recipient = "youremail@yourdomain.com";
+    $recipient = "kevindu.np@gmail.com";
 	$subject = "Message from $name";
 
     // Email content.
