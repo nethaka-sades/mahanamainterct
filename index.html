@@ -336,13 +336,16 @@
                     method: 'POST',
                     body: formData
                 })
-                .then(response => response.json())
-                .then(data => {
-                    // Hide the form
-                    document.querySelector('.contact-form').style.display = 'none';
-                    
-                    // Show success message
-                    document.getElementById('success-message').style.display = 'block';
+                .then(response => {
+                    // Check if the submission is successful (HTTP status 200)
+                    if (response.ok) {
+                        // Hide the form and show success message
+                        document.querySelector('.contact-form').style.display = 'none';
+                        document.getElementById('success-message').style.display = 'block';
+                    } else {
+                        // Handle error if Formspree returns an error status
+                        throw new Error('Error sending message');
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -350,6 +353,7 @@
                 });
             });
         </script>
+        
         
         
         
