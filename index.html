@@ -279,90 +279,45 @@
             </div>
         </section><!-- cta-section -->
 
-        
-        <section id="contact" class="contact-section bg-dark">
-            <div class="container-fluid">
-                <div class="row contact-wrap justify-content-md-center">
-                    <div class="col-lg-6 col-md-8 pdl-80">
-                        <div class="contact-info mb-30">
-                            <h2>Reach Out To Us <br> just send an email here</h2>
-                        </div>
-                        <div class="contact-form">
-                            <form action="https://formspree.io/f/xlddoyve" method="POST" id="ajax_form" class="form-horizontal">
-                                <div class="form-group colum-row row">
-                                    <div class="col-sm-6">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Message" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <button id="submit" class="default-btn submit-button" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                                <div id="form-messages" class="alert" role="alert"></div>
-                            </form>
-                        </div>
+
+        <section id="contact">
+            <div>
+                <h2>Contact Us</h2>
+                <form id="contactForm" action="https://formspree.io/f/xlddoyve" method="POST">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+        
+                <!-- Confirmation message -->
+                <div id="confirmationMessage" style="display:none;">
+                    <p>Your message has been sent successfully! Thank you for contacting us.</p>
                 </div>
             </div>
-        </section><!-- contact-section -->
+        </section>
         
         <script>
-            document.getElementById('ajax_form').addEventListener('submit', function(event) {
-                event.preventDefault();  // Prevent default form submission
-        
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-        
-                // Send form data to Formspree
-                fetch('https://formspree.io/f/xlddoyve', {
-                    method: 'POST',
-                    body: new URLSearchParams({
-                        name: name,
-                        email: email,
-                        message: message,
-                    }),
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                })
-                .then(response => response.json())
-                .then(data => {
-                    // Clear the form fields
-                    document.getElementById('ajax_form').reset();
-        
-                    // Display success message (always show this, even if the submission fails)
-                    const successMessage = document.createElement('div');
-                    successMessage.className = 'alert alert-success';
-                    successMessage.innerHTML = 'Your message has been sent successfully!';
-                    document.getElementById('form-messages').appendChild(successMessage);
-                })
-                .catch(error => {
-                    // Display success message even if submission fails
-                    const successMessage = document.createElement('div');
-                    successMessage.className = 'alert alert-success';
-                    successMessage.innerHTML = 'Your message has been sent successfully!';
-                    document.getElementById('form-messages').appendChild(successMessage);
-                });
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form from submitting immediately
+                
+                // Display success message regardless of submission outcome
+                document.getElementById("contactForm").style.display = "none"; // Hide the form
+                document.getElementById("confirmationMessage").style.display = "block"; // Show confirmation
             });
         </script>
         
-        
-        
-		    
-		<footer class="footer-section align-center">
-			<div class="container">
-				<p>&copy; 2024 ICMC</p>
-                <p>DEVELOPED BY <a href="https://github.com/nethaka-sades">NETHAKA DE SARAM</a> & <a href="#">KEVINDU PERERA</a></p>
-			</div>
-		</footer><!-- /.footer_section -->
 
 		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 	
