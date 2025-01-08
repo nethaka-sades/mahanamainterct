@@ -279,34 +279,41 @@
             </div>
         </section><!-- cta-section -->
 
-        <section id="contact">
-            <div>
-                <h2>Contact Us</h2>
-                <form id="contact" action="https://formspree.io/f/xlddoyve" method="POST">
-                    <div>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <section id="contact" class="contact-section bg-dark">
+            <div class="container-fluid">
+                <div class="row contact-wrap">
+                    <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-0 pdl-80">
+                        <div class="contact-info mb-30">
+                            <h2>let's work together projects <br> just send me email here</h2>
+                        </div>
+                        <div class="contact-form">
+                            <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
+                                <div class="form-group colum-row row">
+                                    <div class="col-sm-6">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <textarea id="message" name="message" cols="30" rows="5" class="form-control message" placeholder="Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <button id="submit" class="default-btn submit-button" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                                <div id="form-messages" class="alert" role="alert"></div>
+                            </form>
+                        </div>
                     </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
-        
-                <!-- Success message -->
-                <div id="confirmationMessage" style="display:none; background-color: #d4edda; color: #155724; padding: 10px; margin-top: 10px; border: 1px solid #c3e6cb;">
-                    Your message has been sent successfully! Thank you for contacting us.
                 </div>
             </div>
-        </section>
-        
+            <div id="google-map"></div><!-- /#google-map -->
+        </section><!-- contact-section -->
 
         <footer class="footer-section align-center">
 			<div class="container">
