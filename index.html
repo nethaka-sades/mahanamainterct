@@ -311,11 +311,46 @@
                                 </div>
                                 <div id="form-messages" class="alert" role="alert"></div>
                             </form>
+        
+                            <!-- Success Message Screen -->
+                            <div id="success-message" class="alert alert-success" style="display: none;">
+                                <h3>Your message has been sent successfully!</h3>
+                                <p>Thank you for reaching out.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section><!-- contact-section -->
+        
+        <script>
+            // Handle form submission and success message display
+            document.getElementById('ajax_form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                // Form data
+                const formData = new FormData(this);
+        
+                // Send data to Formspree
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Hide the form
+                    document.querySelector('.contact-form').style.display = 'none';
+                    
+                    // Show success message
+                    document.getElementById('success-message').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message. Please try again later.');
+                });
+            });
+        </script>
+        
         
         
 		    
