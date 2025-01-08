@@ -283,7 +283,7 @@ button {
 }
 
 .site-preloader-wrap .spinner {
-  background-color: #fff;
+  background-color: #ffffff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -736,6 +736,8 @@ ul.nav > li > a.active {
   height: 100%;
   display: grid;
   columns: 4;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .service-title {
@@ -752,24 +754,19 @@ ul.nav > li > a.active {
 }
 .service-content {
   background-color: rgba(255, 255, 255, 0.03);
-  padding: 30px 20px;
+  padding: 25px 20px;
   transition: all 0.2s ease-in-out;
   text-align: center;
 }
 .service-content:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 169, 41, 0.29);
   transition: all 0.2s ease-in-out;
-}
-.service-content i {
-  font-size: 40px;
-  color: #ff4c4c;
-  margin-bottom: 15px;
 }
 .service-content h3 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  margin-top: 4px;
 }
 .service-content p {
   color: #bbb;
